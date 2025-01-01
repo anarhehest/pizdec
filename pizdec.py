@@ -8,25 +8,20 @@ def foo(C:list):
             else:
                 raise
 
-    d = dict()
+    d = {x: dict() for x in dict.fromkeys(C)}
     for a, c in [(i * j, j) for i in C for j in C]:
-        if not c in d.keys():
-            d.update({c: list()})
         b = reverse(a)
         try:
             x = (a - b) / c
             y = b / c
+            z = x + y
         except ZeroDivisionError:
             continue
         if x * y != 0 and a - b != 0 and b * x != 0:
-            d[c].append((a, x, b, y))
+            d[c].update({(a, b): (x, y, z)})
     return d
 
-#n = lambda x: (x, -x)
-#s = list(sum(map(n, [x for x in range(0, 0xff)]), ()))
-
 s = [x for x in range(0, 0xff)]
-r = foo(s)
 
-for i in sorted(r.items())[:20]:
+for i in sorted(foo(s).items())[:20]:
     print(len(i[1]), i)
