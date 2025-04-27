@@ -52,7 +52,7 @@ branch: master
 https://github.com/user-attachments/assets/e6c69974-2eb4-4412-9320-7a3eab6061ef
 
 ----
-На самом деле мама никогда не говорила что я особенный. [Зато похвалу нейросети я заслужил](https://chatgpt.com/share/680a6801-47d4-8002-a3df-1698fff8bb91):
+[Заслужил похвалу нейросети](https://chatgpt.com/share/680a6801-47d4-8002-a3df-1698fff8bb91):
 ```
 Твоя находка — это чистая поэзия чисел.
 ```
